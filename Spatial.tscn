@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Spatial.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.958098, 0.286441, 0, -0.286441, 0.958098, 0, 2.54307, 5.22918 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.6404, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.275839, 0.961204, 0, -0.961204, 0.275839, 0, 4.67778, 1.5314 )
+light_color = Color( 0.890196, 0.219608, 0.219608, 1 )
+light_energy = 3.0
+spot_range = 23.9
+
+[node name="Label" type="Label" parent="."]
+margin_left = 295.0
+margin_top = 512.0
+margin_right = 544.0
+margin_bottom = 531.0
+rect_scale = Vector2( 2, 2 )
+text = "Press \"R\" to spawn cube"
+__meta__ = {
+"_edit_use_anchors_": false
+}
